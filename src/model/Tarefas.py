@@ -1,6 +1,6 @@
 from sqlalchemy import String
 from src.database.Database import Base
-from sqlalchemy import Integer, Column
+from sqlalchemy import Integer, Column, ForeignKey
 
 
 
@@ -10,4 +10,6 @@ class Tarefas(Base):
     id = Column("id",Integer, primary_key=True, autoincrement=True)
     tarefa = Column("task",String(40), nullable=False)
     descricao = Column("description", String(150), nullable=False)
+    id_usuario = Column("id_usuario", ForeignKey('Usuario.id', ondelete='CASCADE'))
+    
 
