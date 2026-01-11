@@ -10,6 +10,6 @@ class Tarefas(Base):
     id = Column("id",Integer, primary_key=True, autoincrement=True)
     tarefa = Column("task",String(40), nullable=False)
     descricao = Column("description", String(150), nullable=False)
-    id_usuario = Column("id_usuario", ForeignKey('Usuario.id', ondelete='CASCADE'))
-    
+    id_usuario = Column("id_usuario", ForeignKey('usuarios.id', ondelete='CASCADE'))
+
 

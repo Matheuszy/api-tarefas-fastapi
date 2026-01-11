@@ -18,6 +18,7 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 from src.database.Database import Base
 from src.model.Tarefas import Tarefas
+from src.model.Usuario import Usuario
 
 target_metadata = Base.metadata
 
