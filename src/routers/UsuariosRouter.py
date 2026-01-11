@@ -19,7 +19,7 @@ def get_db():
 @users_router.post("/criar_novo_usuarios")
 def create_user(
         usuario: UsuariosSchema,
-        db: Session = Depends(get_db())
+        db: Session = Depends(get_db)
 ):
     novo_usuario = UsuarioService.create_user(db, usuario)
 
